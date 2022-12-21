@@ -1,0 +1,61 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : canny
+Version: T-2022.03-SP3
+Date   : Sat Dec 17 16:27:27 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32lvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db)
+
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+canny                  16000             saed32lvt_tt0p85v25c
+
+
+Global Operating Voltage = 0.85 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 102.8793 uW   (81%)
+  Net Switching Power  =  24.5353 uW   (19%)
+                         ---------
+Total Dynamic Power    = 127.4147 uW  (100%)
+
+Cell Leakage Power     =   1.4285 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network     85.8121            0.0000            0.0000           85.8121  (   5.52%)  i
+register       -6.2836e+00            1.3587        6.9860e+08          693.6754 (  44.58%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     23.3508           23.1766        7.2991e+08          776.4407  (  49.90%)
+--------------------------------------------------------------------------------------------------
+Total            102.8793 uW        24.5353 uW     1.4285e+09 pW     1.5559e+03 uW
+1
